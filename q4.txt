@@ -1,0 +1,4 @@
+select multi_age.area_name, (age_ed.a1 - multi_age.total2 - multi_age.total3) single_language_pop
+from multi_age,age_ed
+where multi_age.area_name="INDIA" AND age_ed.area_name="INDIA" AND multi_age.total_pop="Total" AND multi_age.age_group="Total" AND age_ed.total_rural_urban="Total" AND age_ed.age_group="All ages";
+

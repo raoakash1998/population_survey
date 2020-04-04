@@ -1,0 +1,8 @@
+
+
+SELECT DISTINCT a4, ((b9*100.00)/a7) Percentage_of_triangual_pop
+FROM (SELECT agegp_edu.a4, lang_agegp.b9, agegp_edu.a7 
+FROM agegp_edu,lang_agegp
+WHERE agegp_edu.a4!= "INDIA" AND agegp_edu.a2=lang_agegp.b1 AND lang_agegp.b4="Total"  AND lang_agegp.b5="Total" AND agegp_edu.a5="Total" AND agegp_edu.a6="All ages")
+ORDER BY ((b9*100.00)/a7) DESC;
+
